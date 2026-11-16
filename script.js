@@ -125,7 +125,7 @@ function createWatchCardHTML(watch) {
         <img 
           src="${watch.image}" 
           alt="${escapeHTML(watch.brand + ' ' + watch.model)}"
-          onerror="this.onerror=null; this.src='assets/images/watches/rolex/rolex-submariner-126610ln.jpg';"
+          onerror="this.onerror=null; this.src='catalogue/Rolex/Rolex 01.jpg';"
           loading="lazy"
         />
       </div>
@@ -172,10 +172,10 @@ function initHomePage() {
     heroVideo.play().catch(function () {});
   }
 
-  // Filter 6 featured timepieces
+  // Filter 8 featured flagship timepieces (2 from each historic house)
   const featured = WATCHES.filter(function (w) {
     return w.featured;
-  }).slice(0, 6);
+  }).slice(0, 8);
 
   grid.innerHTML = featured.map(createWatchCardHTML).join("");
 }
@@ -320,9 +320,9 @@ function initDetailPage() {
       <!-- Left: Large High-Resolution Image Box -->
       <div class="detail-image-box">
         <img 
-          src="${watch.image}" 
+          src="${watch.highResImage || watch.image}" 
           alt="${escapeHTML(watch.brand + ' ' + watch.model)}"
-          onerror="this.onerror=null; this.src='assets/images/watches/rolex/rolex-submariner-126610ln.jpg';"
+          onerror="this.onerror=null; this.src='catalogue/Rolex/Rolex 01.jpg';"
         />
       </div>
 
@@ -429,17 +429,19 @@ function initBrandsPage() {
   if (!container || typeof BRANDS === "undefined") return;
 
   container.innerHTML = BRANDS.map(function (brand) {
+    const initial = brand.logoText === "OMEGA" ? "Ω" : (brand.name === "Grand Seiko" ? "GS" : brand.name.substring(0, 1));
     return `
       <div class="brand-card">
-        <div class="brand-icon-circle">${escapeHTML(brand.name.substring(0, 1))}</div>
+        <div class="brand-icon-circle">${escapeHTML(initial)}</div>
         <h3 class="brand-title">${escapeHTML(brand.name)}</h3>
         <p class="brand-origin">${escapeHTML(brand.origin)} · Est. ${brand.founded}</p>
         <p class="brand-desc">${escapeHTML(brand.description)}</p>
         <div class="brand-models-list">
-          <strong>Key References:</strong> ${brand.keyModels.join(" · ")}
+          <strong>Catalogue References (${brand.count || 7}):</strong><br>
+          ${brand.keyModels.join(" · ")}
         </div>
         <a href="watches.html?brand=${encodeURIComponent(brand.name)}" class="btn btn-outline btn-sm" style="margin-top: auto;">
-          Explore ${escapeHTML(brand.name)} Collection →
+          Explore ${escapeHTML(brand.name)} Collection (${brand.count || 7}) →
         </a>
       </div>
     `;

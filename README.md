@@ -19,9 +19,9 @@ A clean, modern multi-page web development project showcasing curated mechanical
 ---
 
 ## 📄 Pages Included
-1. **`index.html` (Home)**: Hero introduction, key metrics stats bar, curated vault specimens preview, and brand spotlight cards.
-2. **`watches.html` (Collection Catalog)**: Full 24-timepiece archive with instant live search, brand filter buttons, sort options (price/year), and clickable cards.
-3. **`watch-detail.html` (Watch Dossier)**: Dynamic single-watch detail view that loads specifications, pricing, high-res photography, and an interactive "Save to Wishlist" button based on the URL parameter (`?id=...`).
+1. **`index.html` (Home)**: Minimal hero with `video.webm` background video, key metrics stats bar, curated vault specimens preview, and brand spotlight cards.
+2. **`watches.html` (Collection Catalog)**: Full 28-timepiece studio archive with instant live search, brand filter buttons, sort options (price/year), and clickable cards.
+3. **`watch-detail.html` (Watch Dossier)**: Dynamic single-watch detail view that loads specifications, pricing, print-ready high-res studio photography, and an interactive "Save to Wishlist" button based on the URL parameter (`?id=...`).
 4. **`brands.html` (Heritage Houses)**: Historical profiles of Rolex, Omega, Tudor, and Grand Seiko with direct links to view each brand's watches.
 5. **`about.html` (About Us)**: Horological standards, 4 pillars of authenticity, multi-point inspection protocol, and academic project note.
 6. **`contact.html` (Concierge & Contact)**: Working interactive inquiry form with validation, showroom details, and expandable FAQ accordions.
@@ -31,17 +31,21 @@ A clean, modern multi-page web development project showcasing curated mechanical
 ## 📦 Project Structure
 ```text
 Project/
-├── index.html            # Homepage
-├── watches.html          # Watches catalog with search and filters
-├── watch-detail.html     # Single watch dossier view
-├── brands.html           # Brand profiles and history
+├── index.html            # Homepage with video.webm hero
+├── watches.html          # Watches catalog (28 references with search and filters)
+├── watch-detail.html     # Single watch dossier view (2000px high-res support)
+├── brands.html           # Brand profiles and history (7 references each)
 ├── about.html            # About and authenticity standards
 ├── contact.html          # Inquiries and FAQ accordion
 ├── style.css             # Main stylesheet
-├── data.js               # Watch dataset (24 models + 4 brands)
+├── data.js               # Watch dataset (28 models + 4 brands)
 ├── script.js             # Navigation, search, filter, and detail scripts
-├── assets/
-│   └── images/
-│       └── watches/      # 24 local high-resolution watch photos
+├── video.webm            # Hero background video
+├── catalogue/            # 28 studio-graded watch photos (1024px & 2000px print copies)
+│   ├── Rolex/            # Rolex 01.jpg .. Rolex 07.jpg
+│   ├── Omega/            # Omega 01.jpg .. Omega 07.jpg
+│   ├── Tudor/            # Tudor 01.jpg .. Tudor 07.jpg
+│   ├── Grand Seiko/      # Grand Seiko 01.jpg .. Grand Seiko 07.jpg
+│   └── print-2000/       # 2000 x 2000 high-res copies
 └── README.md             # Project documentation
 ```
