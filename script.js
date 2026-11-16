@@ -166,6 +166,12 @@ function initHomePage() {
   const grid = document.getElementById("featured-watch-grid");
   if (!grid || typeof WATCHES === "undefined") return;
 
+  // Ensure background video autoplays smoothly
+  const heroVideo = document.querySelector(".hero-video");
+  if (heroVideo) {
+    heroVideo.play().catch(function () {});
+  }
+
   // Filter 6 featured timepieces
   const featured = WATCHES.filter(function (w) {
     return w.featured;
@@ -504,3 +510,4 @@ function initContactPage() {
     }
   });
 }
+

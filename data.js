@@ -604,3 +604,4 @@ const BRANDS = [
     image: "assets/images/watches/grand-seiko/grand-seiko-snowflake-sbga211.jpg"
   }
 ];
+

@@ -260,43 +260,72 @@ img {
 }
 
 /* ==========================================================
-   HERO BANNER (index.html)
+   HERO BANNER (index.html) WITH BACKGROUND VIDEO
    ========================================================== */
 .hero {
   position: relative;
-  padding: 110px 0 90px 0;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  background: radial-gradient(circle at 50% 20%, rgba(56, 189, 248, 0.08) 0%, transparent 60%),
-              var(--bg-dark);
+  background-color: var(--bg-dark);
   border-bottom: 1px solid var(--border);
+  overflow: hidden;
+  padding: 100px 20px 80px 20px;
 }
 
-.hero-subtitle {
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  color: var(--accent);
-  margin-bottom: 16px;
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.8;
 }
 
-.hero-title {
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(10, 14, 20, 0.35) 0%, rgba(10, 14, 20, 0.75) 70%, rgba(10, 14, 20, 0.95) 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-title-minimal {
   font-family: var(--font-serif);
-  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-size: clamp(3rem, 10vw, 6.5rem);
   font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 20px;
+  letter-spacing: clamp(8px, 2.5vw, 24px);
+  text-transform: uppercase;
+  color: var(--text-main);
+  margin-bottom: 24px;
+  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.95), 0 0 50px rgba(56, 189, 248, 0.3);
+  animation: heroTitleFadeIn 1.2s ease-out;
 }
 
-.hero-title span {
-  color: var(--accent);
-}
-
-.hero-text {
-  font-size: 1.05rem;
-  color: var(--text-muted);
-  max-width: 620px;
-  margin: 0 auto 35px auto;
+@keyframes heroTitleFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero-actions {
@@ -304,6 +333,18 @@ img {
   justify-content: center;
   gap: 16px;
   flex-wrap: wrap;
+  animation: heroActionsFadeIn 1.4s ease-out;
+}
+
+@keyframes heroActionsFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ==========================================================
@@ -1054,3 +1095,4 @@ textarea.form-control {
     align-items: stretch;
   }
 }
+
