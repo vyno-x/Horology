@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Inquiries — HOROLOGY</title>
+  <meta name="description" content="Get in touch with our horological advisors, schedule a private viewing, or ask about watch sourcing.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- SITE HEADER / NAVBAR -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo">HORO<span>LOGY</span></a>
+
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="watches.html" class="nav-link">Watches</a></li>
+          <li><a href="brands.html" class="nav-link">Brands</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+          <li>
+            <a href="watches.html" class="wishlist-pill" title="Saved timepieces in your collection">
+              <span>★ Saved</span>
+              <span class="wishlist-counter" id="wishlist-counter">0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT: CONTACT & INQUIRIES -->
+  <main class="section">
+    <div class="container">
+      <h1 class="section-title">Private Concierge & Inquiries</h1>
+      <p class="section-subtitle">
+        Have questions regarding a specific reference, international shipping, or seeking to consign a timepiece? We are here to assist.
+      </p>
+
+      <div class="contact-layout">
+        <!-- LEFT COLUMN: INQUIRY FORM -->
+        <div class="contact-card">
+          <h2 style="font-family: var(--font-serif); font-size: 1.4rem; margin-bottom: 20px; color: var(--text-main);">
+            Send an Inquiry
+          </h2>
+
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="name-field" class="form-label">Full Name *</label>
+              <input type="text" id="name-field" class="form-control" placeholder="e.g. Alexander Wright" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email-field" class="form-label">Email Address *</label>
+              <input type="email" id="email-field" class="form-control" placeholder="name@domain.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="phone-field" class="form-label">Phone / WhatsApp (Optional)</label>
+              <input type="tel" id="phone-field" class="form-control" placeholder="+1 (555) 000-0000" />
+            </div>
+
+            <div class="form-group">
+              <label for="interest-select" class="form-label">Inquiry Type</label>
+              <select id="interest-select" class="form-control">
+                <option value="acquisition">Private Acquisition / Purchase</option>
+                <option value="appointment">Schedule Private Showroom Viewing</option>
+                <option value="consign">Sell or Consign a Timepiece</option>
+                <option value="sourcing">Custom Watch Sourcing Request</option>
+                <option value="general">General Horological Question</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message-field" class="form-label">Message / Timepiece Notes *</label>
+              <textarea id="message-field" class="form-control" placeholder="Tell us how we can help..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              Submit Confidential Inquiry
+            </button>
+          </form>
+        </div>
+
+        <!-- RIGHT COLUMN: SHOWROOM DETAILS & INTERACTIVE FAQ -->
+        <div>
+          <!-- Showroom Info Box -->
+          <div class="contact-card" style="margin-bottom: 25px;">
+            <h2 style="font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 15px; color: var(--text-main);">
+              Private Showroom Hours
+            </h2>
+            <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.7; margin-bottom: 15px;">
+              By appointment only. Located in the financial and arts district for discreet viewing of vault inventory.
+            </p>
+            <ul style="list-style: none; color: var(--text-muted); font-size: 0.88rem; line-height: 1.8;">
+              <li>📍 <strong>Showroom:</strong> 450 Lexington Avenue, Suite 2400, New York, NY</li>
+              <li>⏰ <strong>Hours:</strong> Tuesday – Saturday, 10:00 AM – 6:00 PM EST</li>
+              <li>📞 <strong>Concierge:</strong> +1 (800) 555-TIME (8463)</li>
+              <li>✉️ <strong>Direct:</strong> concierge@horology-vault.com</li>
+            </ul>
+          </div>
+
+          <!-- Interactive FAQ Accordion -->
+          <div class="contact-card">
+            <h2 style="font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 15px; color: var(--text-main);">
+              Frequently Asked Questions
+            </h2>
+
+            <div class="faq-list">
+              <div class="faq-item">
+                <button type="button" class="faq-question">
+                  How is authenticity verified?
+                </button>
+                <div class="faq-answer">
+                  Every watch is de-cased and evaluated under high magnification by master watchmakers. We inspect movement bridge bevels, escapement components, serial number depth, and cross-reference factory archival registries.
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button type="button" class="faq-question">
+                  What is your return & inspection policy?
+                </button>
+                <div class="faq-answer">
+                  We provide an unconditional 14-day inspection privilege. If you are not fully satisfied with the accuracy or condition, you may return the watch for a full refund provided the security tag remains intact.
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button type="button" class="faq-question">
+                  How does international shipping work?
+                </button>
+                <div class="faq-answer">
+                  All watches are dispatched via armored courier (Ferrari Express or Malca-Amit) with 100% full declared value insurance and adult signature verification required upon delivery.
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button type="button" class="faq-question">
+                  Do you accept trade-ins or consignments?
+                </button>
+                <div class="faq-answer">
+                  Yes, we actively purchase and consign modern and vintage mechanical watches from Rolex, Omega, Tudor, Grand Seiko, and other leading manufactures. Select "Sell or Consign" in the form to get an appraisal.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- CONFIRMATION MODAL POPUP -->
+  <div class="modal-overlay" id="thankyou-modal">
+    <div class="modal-card">
+      <div style="font-size: 2.5rem; margin-bottom: 10px;">✅</div>
+      <h3>Inquiry Received</h3>
+      <p>
+        Thank you for contacting Horology. Your message has been logged in our system. 
+        A senior horological advisor will review your notes and reach out within 24 business hours.
+      </p>
+      <button type="button" class="btn btn-primary" id="modal-close-btn">
+        Close Window
+      </button>
+    </div>
+  </div>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="display:inline-block; margin-bottom:12px;">
+            HORO<span>LOGY</span>
+          </a>
+          <p>
+            Certified pre-owned luxury marketplace connecting collectors with verified mechanical watches.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="watches.html">All Watches</a></li>
+            <li><a href="brands.html">Brands</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact & FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Brands</h4>
+          <ul class="footer-links">
+            <li><a href="watches.html?brand=Rolex">Rolex</a></li>
+            <li><a href="watches.html?brand=Omega">Omega</a></li>
+            <li><a href="watches.html?brand=Tudor">Tudor</a></li>
+            <li><a href="watches.html?brand=Grand%20Seiko">Grand Seiko</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Client Confidentiality</h4>
+          <p style="font-size:0.85rem; color:var(--text-muted);">
+            All client transactions and collection inquiries are held under strict non-disclosure.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Horology Luxury Timepieces. Student Web Project.</div>
+        <div style="color:var(--accent); font-size:0.75rem; letter-spacing:1px;">
+          BUILT WITH HTML · CSS · JAVASCRIPT
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

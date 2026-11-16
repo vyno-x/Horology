@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watch Dossier — HOROLOGY</title>
+  <meta name="description" content="View full technical specifications, verified provenance, and pricing for this certified luxury timepiece.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- SITE HEADER / NAVBAR -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo">HORO<span>LOGY</span></a>
+
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="watches.html" class="nav-link active">Watches</a></li>
+          <li><a href="brands.html" class="nav-link">Brands</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li>
+            <a href="watches.html" class="wishlist-pill" title="Saved timepieces in your collection">
+              <span>★ Saved</span>
+              <span class="wishlist-counter" id="wishlist-counter">0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT: DYNAMIC WATCH DOSSIER -->
+  <main class="section">
+    <div class="container" id="watch-detail-container">
+      <!-- Populated dynamically via script.js from URL parameter ?id=... -->
+      <div style="text-align: center; padding: 60px 0; color: var(--text-muted);">
+        <p>Loading timepiece dossier...</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="display:inline-block; margin-bottom:12px;">
+            HORO<span>LOGY</span>
+          </a>
+          <p>
+            Certified pre-owned luxury marketplace connecting collectors with verified mechanical watches.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="watches.html">All Watches</a></li>
+            <li><a href="brands.html">Brands</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact & FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Brands</h4>
+          <ul class="footer-links">
+            <li><a href="watches.html?brand=Rolex">Rolex</a></li>
+            <li><a href="watches.html?brand=Omega">Omega</a></li>
+            <li><a href="watches.html?brand=Tudor">Tudor</a></li>
+            <li><a href="watches.html?brand=Grand%20Seiko">Grand Seiko</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Security & Escrow</h4>
+          <p style="font-size:0.85rem; color:var(--text-muted);">
+            All transactions are backed by insured transit and a 14-day inspection approval window.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Horology Luxury Timepieces. Student Web Project.</div>
+        <div style="color:var(--accent); font-size:0.75rem; letter-spacing:1px;">
+          BUILT WITH HTML · CSS · JAVASCRIPT
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

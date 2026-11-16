@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watch Collection — HOROLOGY</title>
+  <meta name="description" content="Explore our complete catalog of certified luxury watches. Filter by brand, price, or search for your favorite model.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- SITE HEADER / NAVBAR -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo">HORO<span>LOGY</span></a>
+
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="watches.html" class="nav-link active">Watches</a></li>
+          <li><a href="brands.html" class="nav-link">Brands</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li>
+            <a href="watches.html" class="wishlist-pill" title="Saved timepieces in your collection">
+              <span>★ Saved</span>
+              <span class="wishlist-counter" id="wishlist-counter">0</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="section">
+    <div class="container">
+      <h1 class="section-title">The Watch Collection</h1>
+      <p class="section-subtitle">
+        Filter through 24 verified mechanical references from Rolex, Omega, Tudor, and Grand Seiko.
+      </p>
+
+      <!-- CATALOG TOOLBAR: SEARCH & FILTERS -->
+      <div class="catalog-toolbar">
+        <!-- Search Input -->
+        <div class="search-box">
+          <input 
+            type="text" 
+            id="search-input" 
+            placeholder="Search by model, reference, or category (e.g. Submariner, GMT, Diver)..."
+          />
+        </div>
+
+        <!-- Brand Filter Pills -->
+        <div class="filter-pills">
+          <button class="filter-btn active" data-brand="All">All Brands</button>
+          <button class="filter-btn" data-brand="Rolex">Rolex</button>
+          <button class="filter-btn" data-brand="Omega">Omega</button>
+          <button class="filter-btn" data-brand="Tudor">Tudor</button>
+          <button class="filter-btn" data-brand="Grand Seiko">Grand Seiko</button>
+        </div>
+
+        <!-- Sort Select -->
+        <div>
+          <select id="sort-select" class="sort-select">
+            <option value="featured">Sort by: Curated</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="year-desc">Year: Newest First</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Live Count Display -->
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;">
+        <span id="results-count" style="font-size: 0.85rem; color: var(--text-muted); font-weight: 500;">
+          Showing 24 of 24 Timepieces
+        </span>
+        <span style="font-size: 0.8rem; color: var(--accent);">
+          ● Click any watch to view full technical dossier
+        </span>
+      </div>
+
+      <!-- CATALOG WATCH GRID -->
+      <div class="watch-grid" id="catalog-watch-grid"></div>
+    </div>
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="display:inline-block; margin-bottom:12px;">
+            HORO<span>LOGY</span>
+          </a>
+          <p>
+            Certified pre-owned luxury marketplace connecting collectors with verified mechanical watches.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="watches.html">All Watches</a></li>
+            <li><a href="brands.html">Brands</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact & FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Brands</h4>
+          <ul class="footer-links">
+            <li><a href="watches.html?brand=Rolex">Rolex</a></li>
+            <li><a href="watches.html?brand=Omega">Omega</a></li>
+            <li><a href="watches.html?brand=Tudor">Tudor</a></li>
+            <li><a href="watches.html?brand=Grand%20Seiko">Grand Seiko</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Inspection Guarantee</h4>
+          <p style="font-size:0.85rem; color:var(--text-muted);">
+            Each piece is tested for amplitude, beat error, and water resistance before entering our vault.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Horology Luxury Timepieces. Student Web Project.</div>
+        <div style="color:var(--accent); font-size:0.75rem; letter-spacing:1px;">
+          BUILT WITH HTML · CSS · JAVASCRIPT
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
