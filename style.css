@@ -1,8 +1,3 @@
-/* ==========================================================
-   Basic CSS Stylesheet for Horology Project
-   Simple, beginner-friendly styling without complex animations
-   ========================================================== */
-
 /* Basic Reset */
 * {
   margin: 0;
@@ -17,20 +12,18 @@ body {
   line-height: 1.6;
 }
 
-/* Page Container */
+/* Container */
 .container {
   width: 90%;
-  max-width: 960px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
-/* Navigation Bar */
+/* Header & Nav */
 header {
   background-color: #0b0e14;
   padding: 15px 0;
   border-bottom: 1px solid #242c3d;
-  position: sticky;
-  top: 0;
 }
 
 .navbar {
@@ -43,32 +36,27 @@ header {
   font-size: 1.4rem;
   font-weight: bold;
   color: #ffffff;
-  text-decoration: none;
 }
 
 .logo span {
   color: #d4af37;
-  /* Gold accent */
 }
 
-nav a,
 nav button {
   color: #cbd5e1;
-  text-decoration: none;
-  margin-left: 15px;
-  font-size: 0.95rem;
   background: none;
   border: none;
+  margin-left: 15px;
+  font-size: 0.95rem;
   cursor: pointer;
   font-family: inherit;
 }
 
-nav a:hover,
 nav button:hover {
   color: #d4af37;
 }
 
-/* Hero Banner */
+/* Hero Section */
 .hero {
   background-color: #1a202c;
   text-align: center;
@@ -85,46 +73,44 @@ nav button:hover {
   color: #94a3b8;
   max-width: 600px;
   margin: 0 auto 20px auto;
-  font-size: 1rem;
 }
 
 /* Buttons */
 .btn {
-  display: inline-block;
   background-color: #d4af37;
   color: #12161f;
   padding: 9px 18px;
-  text-decoration: none;
   font-weight: bold;
   border-radius: 4px;
   border: none;
   cursor: pointer;
+  display: inline-block;
 }
 
 .btn:hover {
   background-color: #e6c555;
 }
 
-/* Section Styling */
+/* Sections */
 .section {
-  padding: 45px 0;
+  padding: 40px 0;
 }
 
 .section h2 {
   text-align: center;
   color: #d4af37;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   font-size: 1.8rem;
 }
 
 .section-intro {
   text-align: center;
   color: #94a3b8;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   font-size: 0.95rem;
 }
 
-/* 3 Watches Flexbox Grid */
+/* 3 Watch Cards */
 .watch-list {
   display: flex;
   gap: 20px;
@@ -136,7 +122,7 @@ nav button:hover {
   background-color: #1a202c;
   border: 1px solid #242c3d;
   border-radius: 6px;
-  width: 280px;
+  width: 270px;
   padding: 15px;
   text-align: center;
 }
@@ -146,12 +132,12 @@ nav button:hover {
   height: 220px;
   object-fit: cover;
   border-radius: 4px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .watch-card h3 {
   font-size: 1.15rem;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
 
 .watch-brand {
@@ -163,7 +149,7 @@ nav button:hover {
 .watch-card p {
   color: #cbd5e1;
   font-size: 0.88rem;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   text-align: left;
 }
 
@@ -174,7 +160,7 @@ nav button:hover {
   margin-bottom: 12px;
 }
 
-/* About Box & Table */
+/* About Box */
 .about-box {
   background-color: #1a202c;
   border: 1px solid #242c3d;
@@ -188,6 +174,7 @@ nav button:hover {
   margin-bottom: 10px;
 }
 
+/* Table */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -195,8 +182,7 @@ table {
   border: 1px solid #242c3d;
 }
 
-th,
-td {
+th, td {
   border: 1px solid #242c3d;
   padding: 10px 14px;
   text-align: left;
@@ -214,7 +200,7 @@ th {
   border: 1px solid #242c3d;
   border-radius: 6px;
   padding: 25px;
-  max-width: 500px;
+  max-width: 480px;
   margin: 0 auto;
 }
 
@@ -253,8 +239,4 @@ footer {
   margin-top: 40px;
   color: #94a3b8;
   font-size: 0.85rem;
-}
-
-footer p {
-  margin-bottom: 5px;
 }
