@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HOROLOGY — Luxury Watch Showcase</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
   <!-- 1. Header & Navigation -->
@@ -15,154 +13,147 @@
     <div class="container navbar">
       <a href="#" class="logo">HORO<span>LOGY</span></a>
       <nav>
-        <a href="#">Home</a>
-        <a href="#">Watches</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
+        <button type="button">Home</button>
+        <button type="button">Watches</button>
+        <button type="button">About</button>
+        <button type="button">Contact</button>
       </nav>
     </div>
   </header>
 
   <!-- 2. Hero Section -->
-    <section class="hero">
-      <div class="container">
-        <h1>Luxury Mechanical Watches</h1>
-        <p>
-          A curated showcase featuring iconic mechanical timepieces from the world's most renowned watchmakers.
-        </p>
-        <a href="#" class="btn">Explore Featured Watches</a>
-      </div>
-    </section>
+  <section class="hero">
+    <div class="container">
+      <h1>Luxury Mechanical Watches</h1>
+      <p>
+        A curated showcase featuring iconic mechanical timepieces from the world's most renowned watchmakers.
+      </p>
+      <button type="button" class="btn">Explore Featured Watches</button>
+    </div>
+  </section>
 
-    <!-- 3. Watches Section (3 Featured Watches) -->
-      <section class="section">
-        <div class="container">
-          <h2>Featured Watches</h2>
-          <p class="section-intro">Three iconic mechanical timepieces from historic watchmakers.</p>
+  <!-- 3. Watches Section (3 Featured Watches) -->
+  <section class="section">
+    <div class="container">
+      <h2>Featured Watches</h2>
+      <p class="section-intro">Three iconic mechanical timepieces from historic watchmakers.</p>
 
-          <div class="watch-list">
-            <!-- Watch 1: Rolex -->
-            <div class="watch-card">
-              <img src="catalogue/Rolex/Rolex 01.jpg" alt="Rolex Submariner Date">
-              <h3>Submariner Date</h3>
-              <div class="watch-brand">Rolex &middot; 41mm Oystersteel</div>
-              <p>The classic luxury diving watch with black ceramic bezel, waterproof case, and automatic Calibre 3235
-                movement.</p>
-              <div class="price">$14,300</div>
-              <a href="#" class="btn">Inquire</a>
-            </div>
-
-            <!-- Watch 2: Omega -->
-            <div class="watch-card">
-              <img src="catalogue/Omega/Omega 01.jpg" alt="Omega Speedmaster Moonwatch">
-              <h3>Speedmaster Moonwatch</h3>
-              <div class="watch-brand">Omega &middot; 42mm Steel</div>
-              <p>Famous chronograph watch worn on the lunar surface during Apollo 11. Features manual-wind Calibre 3861.
-              </p>
-              <div class="price">$6,900</div>
-              <a href="#" class="btn">Inquire</a>
-            </div>
-
-            <!-- Watch 3: Tudor -->
-            <div class="watch-card">
-              <img src="catalogue/Tudor/Tudor 01.jpg" alt="Tudor Black Bay Fifty-Eight">
-              <h3>Black Bay Fifty-Eight</h3>
-              <div class="watch-brand">Tudor &middot; 39mm Steel</div>
-              <p>Vintage diver styling with warm gold dial details, 200-meter depth rating, and in-house 70-hour power
-                reserve.</p>
-              <div class="price">$3,800</div>
-              <a href="#" class="btn">Inquire</a>
-            </div>
-          </div>
+      <div class="watch-list">
+        <!-- Watch 1: Rolex -->
+        <div class="watch-card">
+          <img src="catalogue/Rolex/Rolex 01.jpg" alt="Rolex Submariner Date">
+          <h3>Submariner Date</h3>
+          <div class="watch-brand">Rolex &middot; 41mm Oystersteel</div>
+          <p>The classic luxury diving watch with black ceramic bezel, waterproof case, and automatic Calibre 3235 movement.</p>
+          <div class="price">$14,300</div>
+          <button type="button" class="btn">Inquire</button>
         </div>
-      </section>
 
-      <!-- 4. About Section with Simple Table -->
-        <section class="section">
-          <div class="container">
-            <h2>About Horology</h2>
-            <p class="section-intro">The art and precision of mechanical timekeeping.</p>
+        <!-- Watch 2: Omega -->
+        <div class="watch-card">
+          <img src="catalogue/Omega/Omega 01.jpg" alt="Omega Speedmaster Moonwatch">
+          <h3>Speedmaster Moonwatch</h3>
+          <div class="watch-brand">Omega &middot; 42mm Steel</div>
+          <p>Famous chronograph watch worn on the lunar surface during Apollo 11. Features manual-wind Calibre 3861.</p>
+          <div class="price">$6,900</div>
+          <button type="button" class="btn">Inquire</button>
+        </div>
 
-            <div class="about-box">
-              <p>
-                Mechanical watches are powered by a wound spring instead of a battery. They represent timeless
-                engineering and human craftsmanship that can last for generations.
-              </p>
-              <p>
-                Each timepiece in our collection is crafted with high-grade materials, precision-calibrated gears, and
-                durable water-resistant cases.
-              </p>
-            </div>
+        <!-- Watch 3: Tudor -->
+        <div class="watch-card">
+          <img src="catalogue/Tudor/Tudor 01.jpg" alt="Tudor Black Bay Fifty-Eight">
+          <h3>Black Bay Fifty-Eight</h3>
+          <div class="watch-brand">Tudor &middot; 39mm Steel</div>
+          <p>Vintage diver styling with warm gold dial details, 200-meter depth rating, and in-house 70-hour power reserve.</p>
+          <div class="price">$3,800</div>
+          <button type="button" class="btn">Inquire</button>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            <!-- Comparison Table -->
-            <table>
-              <thead>
-                <tr>
-                  <th>Watch Model</th>
-                  <th>Brand</th>
-                  <th>Movement</th>
-                  <th>Price</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Submariner Date</td>
-                  <td>Rolex</td>
-                  <td>Automatic</td>
-                  <td>$14,300</td>
-                </tr>
-                <tr>
-                  <td>Speedmaster Moonwatch</td>
-                  <td>Omega</td>
-                  <td>Manual Wind</td>
-                  <td>$6,900</td>
-                </tr>
-                <tr>
-                  <td>Black Bay Fifty-Eight</td>
-                  <td>Tudor</td>
-                  <td>Automatic</td>
-                  <td>$3,800</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
+  <!-- 4. About Section with Simple Table -->
+  <section class="section">
+    <div class="container">
+      <h2>About Horology</h2>
+      <p class="section-intro">The art and precision of mechanical timekeeping.</p>
 
-        <!-- 5. Contact Section -->
-          <section class="section">
-            <div class="container">
-              <h2>Contact Us</h2>
-              <p class="section-intro">Have a question? Send us a quick inquiry.</p>
+      <div class="about-box">
+        <p>
+          Mechanical watches are powered by a wound spring instead of a battery. They represent timeless engineering and human craftsmanship that can last for generations.
+        </p>
+        <p>
+          Each timepiece in our collection is crafted with high-grade materials, precision-calibrated gears, and durable water-resistant cases.
+        </p>
+      </div>
 
-              <form class="contact-form" action="#" method="get">
-                <div class="form-group">
-                  <label for="name">Your Name:</label>
-                  <input type="text" id="name" name="name" placeholder="Enter your name" required>
-                </div>
+      <!-- Comparison Table -->
+      <table>
+        <thead>
+          <tr>
+            <th>Watch Model</th>
+            <th>Brand</th>
+            <th>Movement</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Submariner Date</td>
+            <td>Rolex</td>
+            <td>Automatic</td>
+            <td>$14,300</td>
+          </tr>
+          <tr>
+            <td>Speedmaster Moonwatch</td>
+            <td>Omega</td>
+            <td>Manual Wind</td>
+            <td>$6,900</td>
+          </tr>
+          <tr>
+            <td>Black Bay Fifty-Eight</td>
+            <td>Tudor</td>
+            <td>Automatic</td>
+            <td>$3,800</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
 
-                <div class="form-group">
-                  <label for="email">Email Address:</label>
-                  <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                </div>
+  <!-- 5. Contact Section -->
+  <section class="section">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p class="section-intro">Have a question? Send us a quick inquiry.</p>
 
-                <div class="form-group">
-                  <label for="message">Message:</label>
-                  <textarea id="message" name="message" placeholder="Which watch are you interested in?"
-                    required></textarea>
-                </div>
+      <form class="contact-form">
+        <div class="form-group">
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name">
+        </div>
 
-                <button type="submit" class="btn" style="width: 100%;">Send Message</button>
-              </form>
-            </div>
-          </section>
+        <div class="form-group">
+          <label for="email">Email Address:</label>
+          <input type="text" id="email" name="email" placeholder="Enter your email">
+        </div>
 
-          <!-- 6. Footer -->
-          <footer>
-            <div class="container">
-              <p>&copy; 2026 Horology Luxury Timepieces &middot; All Rights Reserved</p>
-            </div>
-          </footer>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" placeholder="Which watch are you interested in?"></textarea>
+        </div>
+
+        <button type="button" class="btn" style="width: 100%;">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- 6. Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Horology Luxury Timepieces &middot; All Rights Reserved</p>
+    </div>
+  </footer>
 
 </body>
-
 </html>

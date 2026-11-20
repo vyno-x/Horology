@@ -51,14 +51,20 @@ header {
   /* Gold accent */
 }
 
-nav a {
+nav a,
+nav button {
   color: #cbd5e1;
   text-decoration: none;
   margin-left: 15px;
   font-size: 0.95rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 }
 
-nav a:hover {
+nav a:hover,
+nav button:hover {
   color: #d4af37;
 }
 
