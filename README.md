@@ -1,29 +1,45 @@
-# HOROLOGY — Luxury Watch Showcase
+# HOROLOGY — Luxury Mechanical Watch Showcase
 
-A clean, modern website built with **1 HTML file** and **1 CSS file**.
-
----
-
-## 📁 Project Files
-- **`index.html`**: The entire website in one clean, straightforward HTML file.
-- **`style.css`**: The stylesheet for styling and layout.
-- **`catalogue/`**: Folder containing the watch photographs.
+A high-end, responsive luxury watch showcase website built with **HTML5**, **CSS3**, and **Vanilla JavaScript**.
 
 ---
 
-## ⌚ The 3 Featured Watches
-1. **Rolex Submariner Date** ($14,300) — Diver watch, automatic movement
-2. **Omega Speedmaster Moonwatch** ($6,900) — Lunar chronograph, manual-wind movement
-3. **Tudor Black Bay Fifty-Eight** ($3,800) — Vintage diver watch, automatic movement
+## ✨ Features Added
+1. **Interactive Dark & Light Mode**:
+   - Toggle button (🌙 / ☀️) in the navigation bar.
+   - Smooth CSS transitions across colors, cards, and backgrounds.
+   - Preference saved automatically to `localStorage`.
+2. **Smooth Animations**:
+   - Hero entrance fade-in animation.
+   - Watch card hover lift (`translateY`) with smooth zoom effect on watch photography.
+   - Floating toast notification banner animations with auto-dismiss.
+   - Form highlight gold glow pulse when a timepiece is selected.
+3. **Interactive "Inquire" System**:
+   - Clicking **Inquire** on any watch:
+     - Displays an immediate interactive message banner (Toast).
+     - Smoothly scrolls to the Concierge Contact form.
+     - Auto-selects the watch in the dropdown and pre-fills the message text.
+4. **Smooth Form Submission**:
+   - Validates input fields without reloading or jumping the page.
+   - Displays a personalized confirmation message with the user's name.
+5. **3 Curated Iconic Watches**:
+   - Rolex Submariner Date ($14,300)
+   - Omega Speedmaster Moonwatch ($6,900)
+   - Tudor Black Bay Fifty-Eight ($3,800)
 
 ---
 
-## 🎤 Presentation Notes for Tomorrow
+## 📁 Project Structure
+```text
+Project/
+├── index.html       # Clean semantic HTML5 single-page structure
+├── style.css        # CSS3 variables, dark/light themes, animations & layout
+├── script.js        # Theme toggle, smooth scrolling, toasts, and form handling
+├── catalogue/       # Studio watch photography
+└── README.md        # Documentation and presentation notes
+```
 
-### If they ask about the "Backend":
-> **What you say:**  
-> *"This project is currently a **front-end static prototype** focused on design, layout, and visual presentation.*  
->  
-> *There is **no backend server or database connected yet** — the contact form and watch details are written directly in front-end HTML.*  
->  
-> *In the future, we can connect a backend (such as Node.js, Python, or PHP) with a database (like MySQL) to dynamically store watch inventory and handle customer inquiries."*
+---
+
+## 🚀 How to Run
+Double-click `index.html` to open directly in any web browser. No server, node, or build process required.

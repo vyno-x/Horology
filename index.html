@@ -3,163 +3,316 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HOROLOGY — Luxury Watch Showcase</title>
+  <title>HOROLOGY — Luxury Mechanical Watch Showcase</title>
+  
   <!-- Browser Tab Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/favicons/favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+
+  <!-- Main Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- 1. Header & Navigation -->
+  <!-- ========================================================
+       1. HEADER & NAVIGATION BAR
+       ======================================================== -->
   <header>
     <div class="container navbar">
-      <div class="logo-box">
-        <img src="assets/favicons/favicon.svg" alt="Horology Logo" class="logo-icon">
+      <div class="logo-box" data-scroll="home" role="button" aria-label="Go to top">
+        <img src="assets/favicons/favicon.svg" alt="Horology Emblem" class="logo-icon">
         <span class="logo">HORO<span>LOGY</span></span>
       </div>
-      <nav>
-        <button type="button">Home</button>
-        <button type="button">Watches</button>
-        <button type="button">About</button>
-        <button type="button">Contact</button>
-      </nav>
+
+      <div class="nav-actions">
+        <nav>
+          <button type="button" class="nav-btn" data-scroll="home">Home</button>
+          <button type="button" class="nav-btn" data-scroll="watches">Watches</button>
+          <button type="button" class="nav-btn" data-scroll="about">About</button>
+          <button type="button" class="nav-btn" data-scroll="contact">Contact</button>
+        </nav>
+
+        <!-- Dark / Light Mode Toggle Button -->
+        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle dark or light theme">
+          <span class="theme-icon">🌙</span>
+          <span class="theme-text">Dark</span>
+        </button>
+      </div>
     </div>
   </header>
 
-  <!-- 2. Hero Section -->
-  <section class="hero">
+  <!-- ========================================================
+       2. HERO SECTION
+       ======================================================== -->
+  <section class="hero" id="home">
     <div class="container">
-      <h1>Luxury Mechanical Watches</h1>
+      <span class="hero-pill">Haute Horlogerie Showcase</span>
+      <h1>Timeless Mechanical Precision</h1>
       <p>
-        A curated showcase featuring iconic mechanical timepieces from the world's most renowned watchmakers.
+        Explore three benchmark expressions of mechanical watchmaking. From oceanic depths to Apollo lunar expeditions, discover timepieces crafted to outlive generations.
       </p>
-      <button type="button" class="btn">Explore Featured Watches</button>
+      <button type="button" class="btn" data-scroll="watches">
+        Explore 3 Featured Watches &darr;
+      </button>
     </div>
   </section>
 
-  <!-- 3. Watches Section (3 Featured Watches) -->
-  <section class="section">
+  <!-- ========================================================
+       3. WATCHES SECTION (3 CURATED WATCHES)
+       ======================================================== -->
+  <section class="section" id="watches">
     <div class="container">
-      <h2>Featured Watches</h2>
-      <p class="section-intro">Three iconic mechanical timepieces from historic watchmakers.</p>
+      <h2 class="section-title">The Curated Collection</h2>
+      <p class="section-subtitle">
+        Three iconic mechanical references celebrated across horological history.
+      </p>
 
       <div class="watch-list">
-        <!-- Watch 1: Rolex -->
-        <div class="watch-card">
-          <img src="catalogue/Rolex/Rolex 01.jpg" alt="Rolex Submariner Date">
-          <h3>Submariner Date</h3>
-          <div class="watch-brand">Rolex &middot; 41mm Oystersteel</div>
-          <p>The classic luxury diving watch with black ceramic bezel, waterproof case, and automatic Calibre 3235 movement.</p>
-          <div class="price">$14,300</div>
-          <button type="button" class="btn">Inquire</button>
-        </div>
+        <!-- Watch 1: Rolex Submariner Date -->
+        <article class="watch-card">
+          <div class="watch-image-wrap">
+            <img src="catalogue/Rolex/Rolex 01.jpg" alt="Rolex Submariner Date 126610LN">
+            <span class="watch-badge">Professional Diver</span>
+          </div>
+          <div class="watch-content">
+            <div class="watch-brand">Rolex Manufacture</div>
+            <h3 class="watch-title">Submariner Date</h3>
+            <p class="watch-ref">Ref. 126610LN &middot; 41mm Oystersteel</p>
+            <p class="watch-desc">
+              The benchmark luxury diving watch featuring an ultra-resilient Cerachrom ceramic bezel, 300m waterproof case, and in-house Calibre 3235 automatic movement.
+            </p>
+            <div class="watch-specs-pill">
+              <span class="spec-tag">41mm</span>
+              <span class="spec-tag">Calibre 3235</span>
+              <span class="spec-tag">300m Water Resist</span>
+              <span class="spec-tag">70h Reserve</span>
+            </div>
+            <div class="watch-card-footer">
+              <span class="price">$14,300</span>
+              <button 
+                type="button" 
+                class="btn btn-inquire"
+                data-watch="Rolex Submariner Date"
+                data-price="$14,300"
+                data-ref="126610LN">
+                Inquire &rarr;
+              </button>
+            </div>
+          </div>
+        </article>
 
-        <!-- Watch 2: Omega -->
-        <div class="watch-card">
-          <img src="catalogue/Omega/Omega 01.jpg" alt="Omega Speedmaster Moonwatch">
-          <h3>Speedmaster Moonwatch</h3>
-          <div class="watch-brand">Omega &middot; 42mm Steel</div>
-          <p>Famous chronograph watch worn on the lunar surface during Apollo 11. Features manual-wind Calibre 3861.</p>
-          <div class="price">$6,900</div>
-          <button type="button" class="btn">Inquire</button>
-        </div>
+        <!-- Watch 2: Omega Speedmaster Moonwatch -->
+        <article class="watch-card">
+          <div class="watch-image-wrap">
+            <img src="catalogue/Omega/Omega 01.jpg" alt="Omega Speedmaster Moonwatch">
+            <span class="watch-badge">Flight Chronograph</span>
+          </div>
+          <div class="watch-content">
+            <div class="watch-brand">Omega Manufacture</div>
+            <h3 class="watch-title">Speedmaster Moonwatch</h3>
+            <p class="watch-ref">Ref. 310.30.42.50.01.001 &middot; 42mm Steel</p>
+            <p class="watch-desc">
+              Flight-qualified by NASA for all manned space missions and worn on the lunar surface during Apollo 11. Powered by the METAS Co-Axial Calibre 3861.
+            </p>
+            <div class="watch-specs-pill">
+              <span class="spec-tag">42mm</span>
+              <span class="spec-tag">Calibre 3861</span>
+              <span class="spec-tag">15,000 Gauss</span>
+              <span class="spec-tag">Manual Wind</span>
+            </div>
+            <div class="watch-card-footer">
+              <span class="price">$6,900</span>
+              <button 
+                type="button" 
+                class="btn btn-inquire"
+                data-watch="Omega Speedmaster Moonwatch"
+                data-price="$6,900"
+                data-ref="310.30.42.50.01.001">
+                Inquire &rarr;
+              </button>
+            </div>
+          </div>
+        </article>
 
-        <!-- Watch 3: Tudor -->
-        <div class="watch-card">
-          <img src="catalogue/Tudor/Tudor 01.jpg" alt="Tudor Black Bay Fifty-Eight">
-          <h3>Black Bay Fifty-Eight</h3>
-          <div class="watch-brand">Tudor &middot; 39mm Steel</div>
-          <p>Vintage diver styling with warm gold dial details, 200-meter depth rating, and in-house 70-hour power reserve.</p>
-          <div class="price">$3,800</div>
-          <button type="button" class="btn">Inquire</button>
-        </div>
+        <!-- Watch 3: Tudor Black Bay Fifty-Eight -->
+        <article class="watch-card">
+          <div class="watch-image-wrap">
+            <img src="catalogue/Tudor/Tudor 01.jpg" alt="Tudor Black Bay Fifty-Eight">
+            <span class="watch-badge">Heritage Diver</span>
+          </div>
+          <div class="watch-content">
+            <div class="watch-brand">Tudor Manufacture</div>
+            <h3 class="watch-title">Black Bay Fifty-Eight</h3>
+            <p class="watch-ref">Ref. M79030N-0001 &middot; 39mm Steel</p>
+            <p class="watch-desc">
+              Vintage 39mm diver proportions paired with warm gilt dial details, Snowflake hands, and the COSC-certified in-house Calibre MT5402 with 70-hour reserve.
+            </p>
+            <div class="watch-specs-pill">
+              <span class="spec-tag">39mm</span>
+              <span class="spec-tag">Calibre MT5402</span>
+              <span class="spec-tag">200m Water Resist</span>
+              <span class="spec-tag">70h Reserve</span>
+            </div>
+            <div class="watch-card-footer">
+              <span class="price">$3,800</span>
+              <button 
+                type="button" 
+                class="btn btn-inquire"
+                data-watch="Tudor Black Bay Fifty-Eight"
+                data-price="$3,800"
+                data-ref="M79030N-0001">
+                Inquire &rarr;
+              </button>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- 4. About Section with Simple Table -->
-  <section class="section">
+  <!-- ========================================================
+       4. ABOUT SECTION & TECHNICAL SPECIFICATION TABLE
+       ======================================================== -->
+  <section class="section" id="about">
     <div class="container">
-      <h2>About Horology</h2>
-      <p class="section-intro">The art and precision of mechanical timekeeping.</p>
+      <h2 class="section-title">The Art of Mechanical Horology</h2>
+      <p class="section-subtitle">
+        Physical gear trains regulated by oscillating hairsprings. No batteries. No planned obsolescence.
+      </p>
 
       <div class="about-box">
+        <h3>Enduring Human Craftsmanship</h3>
         <p>
-          Mechanical watches are powered by a wound spring instead of a battery. They represent timeless engineering and human craftsmanship that can last for generations.
+          Unlike consumer electronic devices that degrade rapidly, a finely regulated mechanical movement is engineered to operate for decades. Each calibre relies solely on potential energy stored inside a coiled mainspring, released precisely through an escapement beating up to 28,800 vibrations per hour.
         </p>
         <p>
-          Each timepiece in our collection is crafted with high-grade materials, precision-calibrated gears, and durable water-resistant cases.
+          Our collection brings together three world-renowned manufactures: Rolex with the archetype of the tool watch; Omega with lunar space exploration; and Tudor with accessible high-performance engineering.
         </p>
       </div>
 
-      <!-- Comparison Table -->
-      <table>
-        <thead>
-          <tr>
-            <th>Watch Model</th>
-            <th>Brand</th>
-            <th>Movement</th>
-            <th>Price</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Submariner Date</td>
-            <td>Rolex</td>
-            <td>Automatic</td>
-            <td>$14,300</td>
-          </tr>
-          <tr>
-            <td>Speedmaster Moonwatch</td>
-            <td>Omega</td>
-            <td>Manual Wind</td>
-            <td>$6,900</td>
-          </tr>
-          <tr>
-            <td>Black Bay Fifty-Eight</td>
-            <td>Tudor</td>
-            <td>Automatic</td>
-            <td>$3,800</td>
-          </tr>
-        </tbody>
-      </table>
+      <!-- Technical Comparison Table -->
+      <h3 style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--text-main); margin-bottom: 14px; text-align: center;">
+        Side-by-Side Reference Comparison
+      </h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Timepiece Reference</th>
+              <th>Manufacture</th>
+              <th>Movement Calibre</th>
+              <th>Winding Type</th>
+              <th>Water Rating</th>
+              <th>Retail Valuation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Submariner Date 126610LN</strong></td>
+              <td>Rolex</td>
+              <td>Calibre 3235 Perpetual</td>
+              <td>Automatic (Self-winding)</td>
+              <td>300 m / 1,000 ft</td>
+              <td><strong>$14,300</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Speedmaster Moonwatch 310.30</strong></td>
+              <td>Omega</td>
+              <td>Co-Axial Master 3861</td>
+              <td>Manual (Hand-wound)</td>
+              <td>50 m / 165 ft</td>
+              <td><strong>$6,900</strong></td>
+            </tr>
+            <tr>
+              <td><strong>Black Bay Fifty-Eight M79030N</strong></td>
+              <td>Tudor</td>
+              <td>Manufacture MT5402</td>
+              <td>Automatic (Self-winding)</td>
+              <td>200 m / 660 ft</td>
+              <td><strong>$3,800</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </section>
 
-  <!-- 5. Contact Section -->
-  <section class="section">
+  <!-- ========================================================
+       5. CONTACT SECTION & INTERACTIVE CONCIERGE FORM
+       ======================================================== -->
+  <section class="section" id="contact">
     <div class="container">
-      <h2>Contact Us</h2>
-      <p class="section-intro">Have a question? Send us a quick inquiry.</p>
+      <h2 class="section-title">Private Concierge &amp; Inquiries</h2>
+      <p class="section-subtitle">
+        Request private allocation, showroom viewing, or inquire about any timepiece in the vault.
+      </p>
 
-      <form class="contact-form">
-        <div class="form-group">
-          <label for="name">Your Name:</label>
-          <input type="text" id="name" name="name" placeholder="Enter your name">
+      <div class="contact-layout">
+        <!-- Interactive Inquiry Form -->
+        <div class="contact-card">
+          <h3>Send Concierge Request</h3>
+          
+          <form id="concierge-form">
+            <div class="form-group">
+              <label for="name">Your Full Name *</label>
+              <input type="text" id="name" name="name" placeholder="e.g. Julian Vance" required>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-input">Email Address or Phone *</label>
+              <input type="text" id="contact-input" name="contact-input" placeholder="e.g. name@domain.com or +1 555-0199" required>
+            </div>
+
+            <div class="form-group">
+              <label for="inquiry-watch">Timepiece of Interest</label>
+              <select id="inquiry-watch" name="inquiry-watch">
+                <option value="rolex">Rolex Submariner Date ($14,300)</option>
+                <option value="omega">Omega Speedmaster Moonwatch ($6,900)</option>
+                <option value="tudor">Tudor Black Bay Fifty-Eight ($3,800)</option>
+                <option value="general">General Horological Consultation</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Concierge Message *</label>
+              <textarea id="message" name="message" placeholder="Please specify your request or question..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn" style="width: 100%;">
+              Submit Confidential Inquiry &rarr;
+            </button>
+          </form>
         </div>
 
-        <div class="form-group">
-          <label for="email">Email Address:</label>
-          <input type="text" id="email" name="email" placeholder="Enter your email">
+        <!-- Showroom Information Details -->
+        <div class="contact-card">
+          <h3>Private Showroom Services</h3>
+          <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6; margin-bottom: 18px;">
+            Private consultations are arranged by appointment at our Manhattan vault to inspect references under magnification.
+          </p>
+          <ul class="info-list">
+            <li>📍 <strong>Showroom:</strong> 450 Lexington Avenue, Suite 2400, New York, NY</li>
+            <li>⏰ <strong>Viewing Hours:</strong> Tuesday &ndash; Saturday, 10:00 AM &ndash; 6:00 PM EST</li>
+            <li>📞 <strong>Direct Line:</strong> +1 (800) 555-8463</li>
+            <li>✉️ <strong>Concierge:</strong> concierge@horology-vault.com</li>
+            <li>🛡️ <strong>Guarantee:</strong> 100% Verified Authenticity &amp; Insured Transit</li>
+          </ul>
         </div>
-
-        <div class="form-group">
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" placeholder="Which watch are you interested in?"></textarea>
-        </div>
-
-        <button type="button" class="btn" style="width: 100%;">Send Message</button>
-      </form>
+      </div>
     </div>
   </section>
 
-  <!-- 6. Footer -->
+  <!-- ========================================================
+       6. SITE FOOTER
+       ======================================================== -->
   <footer>
     <div class="container">
       <p>&copy; 2026 Horology Luxury Timepieces &middot; All Rights Reserved</p>
+      <p class="footer-highlight">CURATED MECHANICAL VAULT &middot; LUXURY HOROLOGICAL SHOWCASE</p>
     </div>
   </footer>
 
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
 </body>
 </html>
