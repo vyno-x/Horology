@@ -32,7 +32,7 @@
           <button type="button" class="nav-btn" data-scroll="contact">Contact</button>
         </nav>
 
-        <!-- Dark / Light Mode Toggle Button -->
+        <!-- Dark / Light Mode Switcher -->
         <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle dark or light theme">
           <span class="theme-icon">🌙</span>
           <span class="theme-text">Dark</span>
@@ -42,17 +42,26 @@
   </header>
 
   <!-- ========================================================
-       2. HERO SECTION
+       2. HERO SECTION WITH VIDEO.WEBM BACKGROUND
        ======================================================== -->
   <section class="hero" id="home">
-    <div class="container">
-      <span class="hero-pill">Haute Horlogerie Showcase</span>
+    <!-- Background Video -->
+    <video class="hero-video" autoplay muted loop playsinline preload="auto">
+      <source src="video.webm" type="video/webm">
+    </video>
+    <div class="hero-overlay"></div>
+
+    <!-- Hero Content -->
+    <div class="container hero-content">
+      <div class="hero-pill">
+        <span>⚡</span> Haute Horlogerie Showcase
+      </div>
       <h1>Timeless Mechanical Precision</h1>
       <p>
-        Explore three benchmark expressions of mechanical watchmaking. From oceanic depths to Apollo lunar expeditions, discover timepieces crafted to outlive generations.
+        Explore three benchmark expressions of mechanical watchmaking. From deep ocean exploration to Apollo lunar landings, discover timepieces crafted to outlive generations.
       </p>
       <button type="button" class="btn" data-scroll="watches">
-        Explore 3 Featured Watches &darr;
+        Explore 3 Curated Timepieces &darr;
       </button>
     </div>
   </section>
@@ -62,15 +71,15 @@
        ======================================================== -->
   <section class="section" id="watches">
     <div class="container">
-      <h2 class="section-title">The Curated Collection</h2>
+      <h2 class="section-title">The Curated Vault</h2>
       <p class="section-subtitle">
-        Three iconic mechanical references celebrated across horological history.
+        Click "View Details" on any reference to inspect technical specifications and historical pedigree.
       </p>
 
       <div class="watch-list">
         <!-- Watch 1: Rolex Submariner Date -->
         <article class="watch-card">
-          <div class="watch-image-wrap">
+          <div class="watch-image-wrap" data-watch-key="rolex-submariner" title="Click to view full dossier">
             <img src="catalogue/Rolex/Rolex 01.jpg" alt="Rolex Submariner Date 126610LN">
             <span class="watch-badge">Professional Diver</span>
           </div>
@@ -79,32 +88,39 @@
             <h3 class="watch-title">Submariner Date</h3>
             <p class="watch-ref">Ref. 126610LN &middot; 41mm Oystersteel</p>
             <p class="watch-desc">
-              The benchmark luxury diving watch featuring an ultra-resilient Cerachrom ceramic bezel, 300m waterproof case, and in-house Calibre 3235 automatic movement.
+              The benchmark luxury diving watch featuring an ultra-resilient Cerachrom ceramic bezel, 300m waterproof case, and in-house Calibre 3235 perpetual movement.
             </p>
             <div class="watch-specs-pill">
-              <span class="spec-tag">41mm</span>
+              <span class="spec-tag">41mm Case</span>
               <span class="spec-tag">Calibre 3235</span>
               <span class="spec-tag">300m Water Resist</span>
-              <span class="spec-tag">70h Reserve</span>
             </div>
             <div class="watch-card-footer">
               <span class="price">$14,300</span>
-              <button 
-                type="button" 
-                class="btn btn-inquire"
-                data-watch="Rolex Submariner Date"
-                data-price="$14,300"
-                data-ref="126610LN">
-                Inquire &rarr;
-              </button>
+              <div class="card-actions">
+                <button 
+                  type="button" 
+                  class="btn btn-secondary btn-sm btn-details"
+                  data-watch-key="rolex-submariner">
+                  View Details
+                </button>
+                <button 
+                  type="button" 
+                  class="btn btn-sm btn-inquire"
+                  data-watch="Rolex Submariner Date"
+                  data-price="$14,300"
+                  data-ref="126610LN">
+                  Inquire
+                </button>
+              </div>
             </div>
           </div>
         </article>
 
         <!-- Watch 2: Omega Speedmaster Moonwatch -->
         <article class="watch-card">
-          <div class="watch-image-wrap">
-            <img src="catalogue/Omega/Omega 01.jpg" alt="Omega Speedmaster Moonwatch">
+          <div class="watch-image-wrap" data-watch-key="omega-speedmaster" title="Click to view full dossier">
+            <img src="catalogue/Omega/Omega 01.jpg" alt="Omega Speedmaster Moonwatch Professional">
             <span class="watch-badge">Flight Chronograph</span>
           </div>
           <div class="watch-content">
@@ -115,28 +131,35 @@
               Flight-qualified by NASA for all manned space missions and worn on the lunar surface during Apollo 11. Powered by the METAS Co-Axial Calibre 3861.
             </p>
             <div class="watch-specs-pill">
-              <span class="spec-tag">42mm</span>
+              <span class="spec-tag">42mm Case</span>
               <span class="spec-tag">Calibre 3861</span>
               <span class="spec-tag">15,000 Gauss</span>
-              <span class="spec-tag">Manual Wind</span>
             </div>
             <div class="watch-card-footer">
               <span class="price">$6,900</span>
-              <button 
-                type="button" 
-                class="btn btn-inquire"
-                data-watch="Omega Speedmaster Moonwatch"
-                data-price="$6,900"
-                data-ref="310.30.42.50.01.001">
-                Inquire &rarr;
-              </button>
+              <div class="card-actions">
+                <button 
+                  type="button" 
+                  class="btn btn-secondary btn-sm btn-details"
+                  data-watch-key="omega-speedmaster">
+                  View Details
+                </button>
+                <button 
+                  type="button" 
+                  class="btn btn-sm btn-inquire"
+                  data-watch="Omega Speedmaster Moonwatch"
+                  data-price="$6,900"
+                  data-ref="310.30.42.50.01.001">
+                  Inquire
+                </button>
+              </div>
             </div>
           </div>
         </article>
 
         <!-- Watch 3: Tudor Black Bay Fifty-Eight -->
         <article class="watch-card">
-          <div class="watch-image-wrap">
+          <div class="watch-image-wrap" data-watch-key="tudor-blackbay" title="Click to view full dossier">
             <img src="catalogue/Tudor/Tudor 01.jpg" alt="Tudor Black Bay Fifty-Eight">
             <span class="watch-badge">Heritage Diver</span>
           </div>
@@ -148,21 +171,28 @@
               Vintage 39mm diver proportions paired with warm gilt dial details, Snowflake hands, and the COSC-certified in-house Calibre MT5402 with 70-hour reserve.
             </p>
             <div class="watch-specs-pill">
-              <span class="spec-tag">39mm</span>
+              <span class="spec-tag">39mm Case</span>
               <span class="spec-tag">Calibre MT5402</span>
-              <span class="spec-tag">200m Water Resist</span>
               <span class="spec-tag">70h Reserve</span>
             </div>
             <div class="watch-card-footer">
               <span class="price">$3,800</span>
-              <button 
-                type="button" 
-                class="btn btn-inquire"
-                data-watch="Tudor Black Bay Fifty-Eight"
-                data-price="$3,800"
-                data-ref="M79030N-0001">
-                Inquire &rarr;
-              </button>
+              <div class="card-actions">
+                <button 
+                  type="button" 
+                  class="btn btn-secondary btn-sm btn-details"
+                  data-watch-key="tudor-blackbay">
+                  View Details
+                </button>
+                <button 
+                  type="button" 
+                  class="btn btn-sm btn-inquire"
+                  data-watch="Tudor Black Bay Fifty-Eight"
+                  data-price="$3,800"
+                  data-ref="M79030N-0001">
+                  Inquire
+                </button>
+              </div>
             </div>
           </div>
         </article>
@@ -171,7 +201,48 @@
   </section>
 
   <!-- ========================================================
-       4. ABOUT SECTION & TECHNICAL SPECIFICATION TABLE
+       4. INTERACTIVE WATCH DETAILS MODAL POPUP
+       ======================================================== -->
+  <div class="modal-overlay" id="watch-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modal-heading">Technical Dossier &amp; Specifications</h3>
+        <button type="button" class="modal-close" id="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <!-- Watch Image Column -->
+        <div class="modal-img-box">
+          <img id="modal-img" src="" alt="Timepiece Photograph">
+        </div>
+
+        <!-- Watch Information Column -->
+        <div class="modal-details">
+          <span class="modal-brand" id="modal-brand">MANUFACTURE</span>
+          <h2 class="modal-title" id="modal-title">Watch Model</h2>
+          <p class="modal-ref" id="modal-ref">Ref. 000000</p>
+          <div class="modal-price" id="modal-price">$0,000</div>
+          
+          <p class="modal-desc" id="modal-desc">
+            Technical description and history will be loaded here.
+          </p>
+
+          <!-- Specifications Table -->
+          <table class="modal-specs-table">
+            <tbody id="modal-specs">
+              <!-- Dynamically populated via script.js -->
+            </tbody>
+          </table>
+
+          <button type="button" class="btn" id="modal-inquire-btn" style="width: 100%;">
+            Inquire About This Reference &rarr;
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       5. ABOUT SECTION & TECHNICAL SPECIFICATION TABLE
        ======================================================== -->
   <section class="section" id="about">
     <div class="container">
@@ -186,12 +257,12 @@
           Unlike consumer electronic devices that degrade rapidly, a finely regulated mechanical movement is engineered to operate for decades. Each calibre relies solely on potential energy stored inside a coiled mainspring, released precisely through an escapement beating up to 28,800 vibrations per hour.
         </p>
         <p>
-          Our collection brings together three world-renowned manufactures: Rolex with the archetype of the tool watch; Omega with lunar space exploration; and Tudor with accessible high-performance engineering.
+          Our vault brings together three world-renowned benchmark manufactures: Rolex with the archetype of the tool watch; Omega with lunar space exploration; and Tudor with accessible high-performance engineering.
         </p>
       </div>
 
       <!-- Technical Comparison Table -->
-      <h3 style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--text-main); margin-bottom: 14px; text-align: center;">
+      <h3 style="font-family: var(--font-heading); font-size: 1.3rem; color: var(--text-main); margin-bottom: 14px; text-align: center;">
         Side-by-Side Reference Comparison
       </h3>
       <div class="table-wrap">
@@ -238,7 +309,7 @@
   </section>
 
   <!-- ========================================================
-       5. CONTACT SECTION & INTERACTIVE CONCIERGE FORM
+       6. CONTACT SECTION & INTERACTIVE CONCIERGE FORM
        ======================================================== -->
   <section class="section" id="contact">
     <div class="container">
@@ -303,7 +374,7 @@
   </section>
 
   <!-- ========================================================
-       6. SITE FOOTER
+       7. SITE FOOTER
        ======================================================== -->
   <footer>
     <div class="container">
