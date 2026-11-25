@@ -1,58 +1,58 @@
 /* ==========================================================
    HOROLOGY - Luxury Mechanical Watch Showcase
-   Modern Obsidian & Cyber Titanium Palette with Video Hero & Modal
+   Ochre Palette (Dark & Soft Refined Light Mode) with Video Hero & Modal
    ========================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
 
 /* ----------------------------------------------------------
-   1. COLOR THEMES (OBSIDIAN TITANIUM & ELECTRIC AZURE)
+   1. COLOR THEMES: OCHRE DARK & REFINED CALM LIGHT
    ---------------------------------------------------------- */
 :root {
-  /* Dark Mode: Deep Obsidian, Brushed Steel & Electric Ice Blue */
-  --bg-main: #07090e;
-  --bg-card: #0f131c;
-  --bg-card-hover: #151b27;
-  --bg-header: rgba(7, 9, 14, 0.85);
-  --border: #1c2433;
-  --border-hover: #00d4ff;
-  --text-main: #ffffff;
-  --text-muted: #94a3b8;
-  --accent: #00d4ff;           /* High-tech Ice Cyan */
-  --accent-hover: #38bdf8;     /* Bright Azure */
-  --accent-soft: rgba(0, 212, 255, 0.12);
-  --accent-glow: rgba(0, 212, 255, 0.35);
-  --badge-bg: rgba(0, 212, 255, 0.1);
-  --badge-text: #00d4ff;
-  --input-bg: #0b0e14;
-  --modal-overlay: rgba(3, 5, 8, 0.82);
+  /* Dark Mode: Deep Charcoal Obsidian & Warm Gold Ochre */
+  --bg-main: #0c0e12;
+  --bg-card: #13171e;
+  --bg-card-hover: #191f28;
+  --bg-header: rgba(12, 14, 18, 0.88);
+  --border: #232a36;
+  --border-hover: #d9923b;
+  --text-main: #f8fafc;
+  --text-muted: #9aa1af;
+  --accent: #d9923b;           /* Rich Warm Ochre */
+  --accent-hover: #e5a44e;     /* Bright Ochre */
+  --accent-soft: rgba(217, 146, 59, 0.13);
+  --accent-glow: rgba(217, 146, 59, 0.35);
+  --badge-bg: rgba(217, 146, 59, 0.12);
+  --badge-text: #e5a44e;
+  --input-bg: #0e1117;
+  --modal-overlay: rgba(6, 7, 10, 0.84);
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  --shadow-hover: 0 18px 40px rgba(0, 212, 255, 0.18);
+  --shadow-hover: 0 18px 40px rgba(217, 146, 59, 0.18);
   --font-heading: 'Space Grotesk', sans-serif;
   --font-body: 'Plus Jakarta Sans', sans-serif;
   --radius: 10px;
 }
 
 [data-theme="light"] {
-  /* Light Mode: Ceramic White, Deep Slate & Cobalt Azure */
-  --bg-main: #f8fafc;
+  /* Light Mode: Calming Warm Stone, Ivory & Understated Ochre Bronze */
+  --bg-main: #faf9f6;
   --bg-card: #ffffff;
-  --bg-card-hover: #f1f5f9;
-  --bg-header: rgba(255, 255, 255, 0.9);
-  --border: #e2e8f0;
-  --border-hover: #0284c7;
-  --text-main: #09090b;
-  --text-muted: #64748b;
-  --accent: #0284c7;           /* Deep Cobalt Azure */
-  --accent-hover: #0369a1;
-  --accent-soft: rgba(2, 132, 199, 0.1);
-  --accent-glow: rgba(2, 132, 199, 0.25);
-  --badge-bg: rgba(2, 132, 199, 0.1);
-  --badge-text: #0284c7;
-  --input-bg: #f8fafc;
-  --modal-overlay: rgba(15, 23, 42, 0.7);
-  --shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
-  --shadow-hover: 0 18px 35px rgba(2, 132, 199, 0.15);
+  --bg-card-hover: #f5f4f0;
+  --bg-header: rgba(250, 249, 246, 0.92);
+  --border: #e6e4df;
+  --border-hover: #a86c29;
+  --text-main: #1c1917;
+  --text-muted: #6e6761;
+  --accent: #a86c29;           /* Refined Ochre Bronze (Tasteful, not too loud) */
+  --accent-hover: #925c20;
+  --accent-soft: rgba(168, 108, 41, 0.09);
+  --accent-glow: rgba(168, 108, 41, 0.22);
+  --badge-bg: rgba(168, 108, 41, 0.08);
+  --badge-text: #8c5820;
+  --input-bg: #f5f4f0;
+  --modal-overlay: rgba(28, 25, 23, 0.65);
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  --shadow-hover: 0 16px 32px rgba(168, 108, 41, 0.13);
 }
 
 /* ----------------------------------------------------------
@@ -162,7 +162,7 @@ nav {
   background-color: var(--accent-soft);
 }
 
-/* Dark/Light Mode Switcher */
+/* Theme Switcher */
 .theme-toggle {
   display: flex;
   align-items: center;
@@ -185,7 +185,7 @@ nav {
 }
 
 /* ----------------------------------------------------------
-   4. HERO BANNER WITH VIDEO.WEBM BACKGROUND
+   4. HERO BANNER WITH VISIBLE VIDEO BACKGROUND (BOTH MODES)
    ---------------------------------------------------------- */
 .hero {
   position: relative;
@@ -198,6 +198,7 @@ nav {
   border-bottom: 1px solid var(--border);
 }
 
+/* Video element: clear and visible in both light & dark modes */
 .hero-video {
   position: absolute;
   top: 50%;
@@ -209,26 +210,29 @@ nav {
   transform: translate(-50%, -50%);
   object-fit: cover;
   z-index: 1;
-  opacity: 0.65;
-  filter: saturate(1.1) brightness(0.85);
+  opacity: 0.78;
+  filter: saturate(1.15) brightness(0.9);
 }
 
+/* Hero overlay for contrast without washing out the video */
 .hero-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at center, rgba(7, 9, 14, 0.45) 0%, rgba(7, 9, 14, 0.88) 100%);
+  background: radial-gradient(circle at center, rgba(12, 14, 18, 0.4) 0%, rgba(12, 14, 18, 0.82) 100%);
   z-index: 2;
 }
 
-[data-theme="light"] .hero-overlay {
-  background: radial-gradient(circle at center, rgba(248, 250, 252, 0.6) 0%, rgba(248, 250, 252, 0.92) 100%);
+/* Light mode overlay: kept transparent enough so the video remains completely visible */
+[data-theme="light"] .hero-video {
+  opacity: 0.72;
+  filter: saturate(1.15) brightness(0.92);
 }
 
-[data-theme="light"] .hero-video {
-  opacity: 0.35;
+[data-theme="light"] .hero-overlay {
+  background: radial-gradient(circle at center, rgba(28, 25, 23, 0.35) 0%, rgba(28, 25, 23, 0.76) 100%);
 }
 
 .hero-content {
@@ -236,6 +240,27 @@ nav {
   z-index: 3;
   padding: 60px 20px;
   animation: heroEntrance 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Text in hero is always crisp and visible over the video */
+.hero .hero-content h1 {
+  font-family: var(--font-heading);
+  font-size: 2.9rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 15px;
+  letter-spacing: -0.5px;
+  line-height: 1.15;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.65);
+}
+
+.hero .hero-content p {
+  color: #e2e8f0;
+  max-width: 620px;
+  margin: 0 auto 28px auto;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.65);
 }
 
 @keyframes heroEntrance {
@@ -253,8 +278,8 @@ nav {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background-color: var(--accent-soft);
-  color: var(--accent);
+  background-color: rgba(217, 146, 59, 0.2);
+  color: #ffbc6b;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 2px;
@@ -264,29 +289,12 @@ nav {
   border: 1px solid var(--accent);
   margin-bottom: 18px;
   animation: pulseGlow 2.5s infinite;
+  backdrop-filter: blur(6px);
 }
 
 @keyframes pulseGlow {
-  0%, 100% { box-shadow: 0 0 0 rgba(0, 212, 255, 0); }
+  0%, 100% { box-shadow: 0 0 0 rgba(217, 146, 59, 0); }
   50% { box-shadow: 0 0 15px var(--accent-glow); }
-}
-
-.hero h1 {
-  font-family: var(--font-heading);
-  font-size: 2.9rem;
-  font-weight: 700;
-  color: var(--text-main);
-  margin-bottom: 15px;
-  letter-spacing: -0.5px;
-  line-height: 1.15;
-}
-
-.hero p {
-  color: var(--text-muted);
-  max-width: 620px;
-  margin: 0 auto 28px auto;
-  font-size: 1.05rem;
-  line-height: 1.6;
 }
 
 /* Reusable Action Buttons */
@@ -296,7 +304,7 @@ nav {
   justify-content: center;
   gap: 8px;
   background-color: var(--accent);
-  color: #07090e;
+  color: #0c0e12;
   padding: 10px 22px;
   font-family: var(--font-body);
   font-weight: 700;
@@ -306,6 +314,10 @@ nav {
   cursor: pointer;
   transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
   box-shadow: 0 4px 14px var(--accent-glow);
+}
+
+[data-theme="light"] .btn {
+  color: #ffffff;
 }
 
 .btn:hover {
@@ -392,7 +404,7 @@ nav {
 .watch-image-wrap {
   width: 100%;
   height: 240px;
-  background-color: #040609;
+  background-color: #050608;
   overflow: hidden;
   position: relative;
   cursor: pointer;
@@ -582,11 +594,11 @@ tr:hover td {
 }
 
 .contact-card.highlight {
-  animation: pulseCyan 1.5s ease-in-out;
+  animation: pulseOchre 1.5s ease-in-out;
 }
 
-@keyframes pulseCyan {
-  0% { border-color: var(--accent); box-shadow: 0 0 0 rgba(0, 212, 255, 0); }
+@keyframes pulseOchre {
+  0% { border-color: var(--accent); box-shadow: 0 0 0 rgba(217, 146, 59, 0); }
   50% { border-color: var(--accent-hover); box-shadow: 0 0 25px var(--accent-glow); }
   100% { border-color: var(--border); box-shadow: var(--shadow); }
 }
@@ -657,7 +669,7 @@ tr:hover td {
 }
 
 /* ----------------------------------------------------------
-   9. INTERACTIVE WATCH DETAIL MODAL ("POPUP DOSSIER")
+   9. INTERACTIVE WATCH DETAIL MODAL
    ---------------------------------------------------------- */
 .modal-overlay {
   position: fixed;
@@ -743,7 +755,7 @@ tr:hover td {
 }
 
 .modal-img-box {
-  background-color: #040609;
+  background-color: #050608;
   border-radius: var(--radius);
   overflow: hidden;
   border: 1px solid var(--border);
