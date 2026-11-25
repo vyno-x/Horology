@@ -6,21 +6,21 @@ A modern, high-tech luxury horological showcase website built with **HTML5**, **
 
 ## ✨ Features
 
-1. **Ochre & Calm Light Themes**:
-   - **Dark Mode**: Warm, rich **Ochre** (`#D9923B`) paired with a deep charcoal obsidian background (`#0C0E12`).
-   - **Light Mode**: Refined, understated warm stone & soft amber bronze (`#A86C29`), calm and subtle without being glaring or overwhelming.
-   - Interactive **Dark Mode / Light Mode** switch in the navbar with `localStorage` persistence.
+1. **Ochre & Forest Green Palette (No Blue, No Harsh Black)**:
+   - **Dark Mode**: Warm, radiant **Golden Ochre** (`#D9923B`) paired with a deep pine forest green background (`#0C140F`, `#132019`) and luminous sage green badges (`#34D399`). Strictly no blue tones and no cold, pitch-black shades.
+   - **Light Mode**: Warm linen/sand canvas (`#F6F5F0`, `#FFFFFF`), deep British racing/forest green (`#2D6A4F`), and refined bronze ochre (`#A86C29`). Soft, natural, and comfortable on the eyes.
+   - Interactive **Dark Mode / Light Mode** switch in the navbar with instant live toggle and `localStorage` persistence.
 
 2. **Cinema Video Hero Screen (`video.webm`)**:
-   - High-definition video background (`video.webm`) with balanced contrast overlays.
-   - Fully and clearly visible in **both Light Mode and Dark Mode**.
+   - High-definition video background (`video.webm`) showing mechanical horology.
+   - Custom vignette overlay engineered to keep the video **clearly visible in both Light Mode and Dark Mode** with high-contrast, crystal-clear typography.
 
 3. **Interactive Watch Details Modal ("View Details" Button)**:
    - Each watch card features a **View Details** button (and clickable photo).
    - Opens an animated technical dossier modal with:
      - High-resolution watch photography
      - Detailed historical pedigree and manufacture notes
-     - Complete technical specifications table (Case size, materials, calibre, power reserve, water resistance, crystal, bracelet)
+     - Complete technical specifications table (Case size, materials, bezel, movement calibre, power reserve, water resistance, crystal, bracelet)
      - Direct "Inquire About This Reference" button inside the modal
      - Supports close button (`×`), backdrop click, and `Escape` key.
 
@@ -32,6 +32,7 @@ A modern, high-tech luxury horological showcase website built with **HTML5**, **
 
 5. **Smooth Form Handling**:
    - Zero-jump, zero-reload form validation.
+   - Accepts either email or phone number.
    - Shows a personalized success toast notification and resets fields cleanly.
 
 6. **3 Curated Benchmark Watches**:
@@ -40,7 +41,7 @@ A modern, high-tech luxury horological showcase website built with **HTML5**, **
    - **Tudor Black Bay Fifty-Eight** (Ref. M79030N-0001 &middot; $3,800)
 
 7. **Concise, High-Performance JavaScript**:
-   - Streamlined `script.js` to ~130 lines while preserving 100% of all interactive functionality.
+   - Streamlined `script.js` to ~145 lines while preserving 100% of all interactive functionality.
 
 ---
 
@@ -48,7 +49,7 @@ A modern, high-tech luxury horological showcase website built with **HTML5**, **
 ```text
 Project/
 ├── index.html       # Single-page semantic HTML5 with video hero & modal
-├── style.css        # Ochre & soft light mode themes, video hero, animations
+├── style.css        # Ochre & forest green palette, video hero, modal & responsive design
 ├── script.js        # Streamlined JS for modal, theme toggle, toasts, form
 ├── video.webm       # High-definition hero background video
 ├── catalogue/       # Studio photography for Rolex, Omega, Tudor

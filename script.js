@@ -25,13 +25,19 @@ const WATCHES = {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  // 1. Theme Toggle (Ochre Dark & Soft Light Mode)
+  // 1. Theme Toggle (Ochre & Forest Green Palette)
   const themeBtn = document.getElementById("theme-toggle");
   const applyTheme = (theme) => {
-    document.documentElement.toggleAttribute("data-theme", theme === "light");
+    if (theme === "light") {
+      document.documentElement.setAttribute("data-theme", "light");
+    } else {
+      document.documentElement.removeAttribute("data-theme");
+    }
     if (themeBtn) {
-      themeBtn.querySelector(".theme-icon").textContent = theme === "light" ? "☀️" : "🌙";
-      themeBtn.querySelector(".theme-text").textContent = theme === "light" ? "Light" : "Dark";
+      const icon = themeBtn.querySelector(".theme-icon");
+      const text = themeBtn.querySelector(".theme-text");
+      if (icon) icon.textContent = theme === "light" ? "☀️" : "🌙";
+      if (text) text.textContent = theme === "light" ? "Light" : "Dark";
     }
   };
   applyTheme(localStorage.getItem("horology_theme") || "dark");

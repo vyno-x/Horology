@@ -1,58 +1,61 @@
 /* ==========================================================
    HOROLOGY - Luxury Mechanical Watch Showcase
-   Ochre Palette (Dark & Soft Refined Light Mode) with Video Hero & Modal
+   Ochre & Forest Green Palette (No Blue, No Harsh Black)
+   Dark Mode & Soft Light Mode with Video Hero & Modal
    ========================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
 
 /* ----------------------------------------------------------
-   1. COLOR THEMES: OCHRE DARK & REFINED CALM LIGHT
+   1. COLOR THEMES: OCHRE & FOREST GREEN
    ---------------------------------------------------------- */
 :root {
-  /* Dark Mode: Deep Charcoal Obsidian & Warm Gold Ochre */
-  --bg-main: #0c0e12;
-  --bg-card: #13171e;
-  --bg-card-hover: #191f28;
-  --bg-header: rgba(12, 14, 18, 0.88);
-  --border: #232a36;
+  /* Dark Mode: Deep Forest Pine, Lush Moss & Warm Golden Ochre */
+  --bg-main: #0c140f;
+  --bg-card: #132019;
+  --bg-card-hover: #192a21;
+  --bg-header: rgba(12, 20, 15, 0.9);
+  --border: #22372b;
   --border-hover: #d9923b;
-  --text-main: #f8fafc;
-  --text-muted: #9aa1af;
-  --accent: #d9923b;           /* Rich Warm Ochre */
+  --text-main: #f5f7f5;
+  --text-muted: #95a59a;
+  --accent: #d9923b;           /* Warm Golden Ochre */
   --accent-hover: #e5a44e;     /* Bright Ochre */
-  --accent-soft: rgba(217, 146, 59, 0.13);
+  --accent-secondary: #34d399; /* Fresh Green Accent */
+  --accent-soft: rgba(217, 146, 59, 0.14);
   --accent-glow: rgba(217, 146, 59, 0.35);
-  --badge-bg: rgba(217, 146, 59, 0.12);
-  --badge-text: #e5a44e;
-  --input-bg: #0e1117;
-  --modal-overlay: rgba(6, 7, 10, 0.84);
-  --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  --shadow-hover: 0 18px 40px rgba(217, 146, 59, 0.18);
+  --badge-bg: rgba(52, 211, 153, 0.12);
+  --badge-text: #34d399;       /* Luminous Sage Green */
+  --input-bg: #0f1913;
+  --modal-overlay: rgba(7, 13, 9, 0.86);
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  --shadow-hover: 0 18px 40px rgba(217, 146, 59, 0.22);
   --font-heading: 'Space Grotesk', sans-serif;
   --font-body: 'Plus Jakarta Sans', sans-serif;
   --radius: 10px;
 }
 
 [data-theme="light"] {
-  /* Light Mode: Calming Warm Stone, Ivory & Understated Ochre Bronze */
-  --bg-main: #faf9f6;
+  /* Light Mode: Warm Linen Sand, Deep British Racing Green & Soft Ochre */
+  --bg-main: #f6f5f0;
   --bg-card: #ffffff;
-  --bg-card-hover: #f5f4f0;
-  --bg-header: rgba(250, 249, 246, 0.92);
-  --border: #e6e4df;
+  --bg-card-hover: #edeae1;
+  --bg-header: rgba(246, 245, 240, 0.94);
+  --border: #ded8cb;
   --border-hover: #a86c29;
-  --text-main: #1c1917;
-  --text-muted: #6e6761;
-  --accent: #a86c29;           /* Refined Ochre Bronze (Tasteful, not too loud) */
+  --text-main: #14221a;
+  --text-muted: #5e6d63;
+  --accent: #a86c29;           /* Refined Ochre Bronze */
   --accent-hover: #925c20;
-  --accent-soft: rgba(168, 108, 41, 0.09);
+  --accent-secondary: #2d6a4f; /* Deep British Forest Green */
+  --accent-soft: rgba(168, 108, 41, 0.1);
   --accent-glow: rgba(168, 108, 41, 0.22);
-  --badge-bg: rgba(168, 108, 41, 0.08);
-  --badge-text: #8c5820;
-  --input-bg: #f5f4f0;
-  --modal-overlay: rgba(28, 25, 23, 0.65);
-  --shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
-  --shadow-hover: 0 16px 32px rgba(168, 108, 41, 0.13);
+  --badge-bg: rgba(45, 106, 79, 0.1);
+  --badge-text: #2d6a4f;       /* Deep Forest Green */
+  --input-bg: #efece3;
+  --modal-overlay: rgba(20, 34, 26, 0.65);
+  --shadow: 0 8px 24px rgba(20, 34, 26, 0.06);
+  --shadow-hover: 0 16px 32px rgba(168, 108, 41, 0.15);
 }
 
 /* ----------------------------------------------------------
@@ -162,7 +165,7 @@ nav {
   background-color: var(--accent-soft);
 }
 
-/* Theme Switcher */
+/* Theme Switcher Button */
 .theme-toggle {
   display: flex;
   align-items: center;
@@ -185,7 +188,7 @@ nav {
 }
 
 /* ----------------------------------------------------------
-   4. HERO BANNER WITH VISIBLE VIDEO BACKGROUND (BOTH MODES)
+   4. HERO BANNER WITH VIVID VIDEO BACKGROUND (BOTH MODES)
    ---------------------------------------------------------- */
 .hero {
   position: relative;
@@ -198,7 +201,6 @@ nav {
   border-bottom: 1px solid var(--border);
 }
 
-/* Video element: clear and visible in both light & dark modes */
 .hero-video {
   position: absolute;
   top: 50%;
@@ -210,29 +212,29 @@ nav {
   transform: translate(-50%, -50%);
   object-fit: cover;
   z-index: 1;
-  opacity: 0.78;
-  filter: saturate(1.15) brightness(0.9);
+  opacity: 0.8;
+  filter: saturate(1.15) brightness(0.92);
 }
 
-/* Hero overlay for contrast without washing out the video */
+/* Dark mode forest overlay */
 .hero-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at center, rgba(12, 14, 18, 0.4) 0%, rgba(12, 14, 18, 0.82) 100%);
+  background: radial-gradient(circle at center, rgba(12, 20, 15, 0.4) 0%, rgba(12, 20, 15, 0.82) 100%);
   z-index: 2;
 }
 
-/* Light mode overlay: kept transparent enough so the video remains completely visible */
+/* Light mode overlay: clear, transparent warm-forest vignette so video is 100% visible */
 [data-theme="light"] .hero-video {
-  opacity: 0.72;
-  filter: saturate(1.15) brightness(0.92);
+  opacity: 0.75;
+  filter: saturate(1.15) brightness(0.95);
 }
 
 [data-theme="light"] .hero-overlay {
-  background: radial-gradient(circle at center, rgba(28, 25, 23, 0.35) 0%, rgba(28, 25, 23, 0.76) 100%);
+  background: radial-gradient(circle at center, rgba(20, 34, 26, 0.35) 0%, rgba(20, 34, 26, 0.75) 100%);
 }
 
 .hero-content {
@@ -242,7 +244,6 @@ nav {
   animation: heroEntrance 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Text in hero is always crisp and visible over the video */
 .hero .hero-content h1 {
   font-family: var(--font-heading);
   font-size: 2.9rem;
@@ -251,7 +252,7 @@ nav {
   margin-bottom: 15px;
   letter-spacing: -0.5px;
   line-height: 1.15;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.65);
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.7);
 }
 
 .hero .hero-content p {
@@ -260,7 +261,7 @@ nav {
   margin: 0 auto 28px auto;
   font-size: 1.05rem;
   line-height: 1.6;
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.65);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.7);
 }
 
 @keyframes heroEntrance {
@@ -278,7 +279,7 @@ nav {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background-color: rgba(217, 146, 59, 0.2);
+  background-color: rgba(217, 146, 59, 0.22);
   color: #ffbc6b;
   font-size: 0.75rem;
   font-weight: 700;
@@ -297,14 +298,14 @@ nav {
   50% { box-shadow: 0 0 15px var(--accent-glow); }
 }
 
-/* Reusable Action Buttons */
+/* Action Buttons */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
   background-color: var(--accent);
-  color: #0c0e12;
+  color: #0c140f;
   padding: 10px 22px;
   font-family: var(--font-body);
   font-weight: 700;
@@ -350,7 +351,7 @@ nav {
 }
 
 /* ----------------------------------------------------------
-   5. SECTIONS & SECTION HEADERS
+   5. SECTIONS & HEADERS
    ---------------------------------------------------------- */
 .section {
   padding: 60px 0;
@@ -375,7 +376,7 @@ nav {
 }
 
 /* ----------------------------------------------------------
-   6. 3 WATCH CARDS (INTERACTIVE & ANIMATED)
+   6. 3 WATCH CARDS
    ---------------------------------------------------------- */
 .watch-list {
   display: grid;
@@ -404,7 +405,7 @@ nav {
 .watch-image-wrap {
   width: 100%;
   height: 240px;
-  background-color: #050608;
+  background-color: #060a07;
   overflow: hidden;
   position: relative;
   cursor: pointer;
@@ -755,7 +756,7 @@ tr:hover td {
 }
 
 .modal-img-box {
-  background-color: #050608;
+  background-color: #060a07;
   border-radius: var(--radius);
   overflow: hidden;
   border: 1px solid var(--border);
