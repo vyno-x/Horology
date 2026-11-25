@@ -25,7 +25,7 @@ const WATCHES = {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  // 1. Theme Toggle (Ochre & Forest Green Palette)
+  // 1. Theme Toggle (Royal Purple Palette)
   const themeBtn = document.getElementById("theme-toggle");
   const applyTheme = (theme) => {
     if (theme === "light") {

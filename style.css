@@ -1,61 +1,60 @@
 /* ==========================================================
    HOROLOGY - Luxury Mechanical Watch Showcase
-   Ochre & Forest Green Palette (No Blue, No Harsh Black)
-   Dark Mode & Soft Light Mode with Video Hero & Modal
+   Royal Purple & Amethyst Palette (Dark & Soft Light Mode)
    ========================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
 
 /* ----------------------------------------------------------
-   1. COLOR THEMES: OCHRE & FOREST GREEN
+   1. COLOR THEMES: ROYAL PURPLE & AMETHYST
    ---------------------------------------------------------- */
 :root {
-  /* Dark Mode: Deep Forest Pine, Lush Moss & Warm Golden Ochre */
-  --bg-main: #0c140f;
-  --bg-card: #132019;
-  --bg-card-hover: #192a21;
-  --bg-header: rgba(12, 20, 15, 0.9);
-  --border: #22372b;
-  --border-hover: #d9923b;
-  --text-main: #f5f7f5;
-  --text-muted: #95a59a;
-  --accent: #d9923b;           /* Warm Golden Ochre */
-  --accent-hover: #e5a44e;     /* Bright Ochre */
-  --accent-secondary: #34d399; /* Fresh Green Accent */
-  --accent-soft: rgba(217, 146, 59, 0.14);
-  --accent-glow: rgba(217, 146, 59, 0.35);
-  --badge-bg: rgba(52, 211, 153, 0.12);
-  --badge-text: #34d399;       /* Luminous Sage Green */
-  --input-bg: #0f1913;
-  --modal-overlay: rgba(7, 13, 9, 0.86);
-  --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
-  --shadow-hover: 0 18px 40px rgba(217, 146, 59, 0.22);
+  /* Dark Mode: Deep Midnight Plum, Obsidian Purple & Luminous Violet */
+  --bg-main: #0f0a18;
+  --bg-card: #171024;
+  --bg-card-hover: #221836;
+  --bg-header: rgba(15, 10, 24, 0.92);
+  --border: #2e1f46;
+  --border-hover: #a855f7;
+  --text-main: #f8f6fc;
+  --text-muted: #a698bd;
+  --accent: #a855f7;           /* Vivid Royal Purple / Violet */
+  --accent-hover: #c084fc;     /* Radiant Lilac */
+  --accent-secondary: #e879f9; /* Soft Orchid Accent */
+  --accent-soft: rgba(168, 85, 247, 0.15);
+  --accent-glow: rgba(168, 85, 247, 0.38);
+  --badge-bg: rgba(168, 85, 247, 0.15);
+  --badge-text: #c084fc;       /* Luminous Lilac */
+  --input-bg: #140d20;
+  --modal-overlay: rgba(10, 6, 17, 0.88);
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.55);
+  --shadow-hover: 0 18px 40px rgba(168, 85, 247, 0.28);
   --font-heading: 'Space Grotesk', sans-serif;
   --font-body: 'Plus Jakarta Sans', sans-serif;
   --radius: 10px;
 }
 
 [data-theme="light"] {
-  /* Light Mode: Warm Linen Sand, Deep British Racing Green & Soft Ochre */
-  --bg-main: #f6f5f0;
+  /* Light Mode: Soft Lavender Canvas, Pure White Cards & Deep Imperial Purple */
+  --bg-main: #f7f5fa;
   --bg-card: #ffffff;
-  --bg-card-hover: #edeae1;
-  --bg-header: rgba(246, 245, 240, 0.94);
-  --border: #ded8cb;
-  --border-hover: #a86c29;
-  --text-main: #14221a;
-  --text-muted: #5e6d63;
-  --accent: #a86c29;           /* Refined Ochre Bronze */
-  --accent-hover: #925c20;
-  --accent-secondary: #2d6a4f; /* Deep British Forest Green */
-  --accent-soft: rgba(168, 108, 41, 0.1);
-  --accent-glow: rgba(168, 108, 41, 0.22);
-  --badge-bg: rgba(45, 106, 79, 0.1);
-  --badge-text: #2d6a4f;       /* Deep Forest Green */
-  --input-bg: #efece3;
-  --modal-overlay: rgba(20, 34, 26, 0.65);
-  --shadow: 0 8px 24px rgba(20, 34, 26, 0.06);
-  --shadow-hover: 0 16px 32px rgba(168, 108, 41, 0.15);
+  --bg-card-hover: #f0ecf6;
+  --bg-header: rgba(247, 245, 250, 0.94);
+  --border: #dfd8ea;
+  --border-hover: #7e22ce;
+  --text-main: #191024;
+  --text-muted: #5f5470;
+  --accent: #7e22ce;           /* Deep Royal Amethyst Purple */
+  --accent-hover: #6b21a8;
+  --accent-secondary: #9333ea;
+  --accent-soft: rgba(126, 34, 206, 0.1);
+  --accent-glow: rgba(126, 34, 206, 0.25);
+  --badge-bg: rgba(126, 34, 206, 0.1);
+  --badge-text: #7e22ce;
+  --input-bg: #f2edf7;
+  --modal-overlay: rgba(25, 16, 36, 0.65);
+  --shadow: 0 8px 24px rgba(25, 16, 36, 0.08);
+  --shadow-hover: 0 16px 32px rgba(126, 34, 206, 0.18);
 }
 
 /* ----------------------------------------------------------
@@ -216,25 +215,25 @@ nav {
   filter: saturate(1.15) brightness(0.92);
 }
 
-/* Dark mode forest overlay */
+/* Dark mode purple atmospheric overlay */
 .hero-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at center, rgba(12, 20, 15, 0.4) 0%, rgba(12, 20, 15, 0.82) 100%);
+  background: radial-gradient(circle at center, rgba(15, 10, 24, 0.42) 0%, rgba(15, 10, 24, 0.85) 100%);
   z-index: 2;
 }
 
-/* Light mode overlay: clear, transparent warm-forest vignette so video is 100% visible */
+/* Light mode overlay: clear, transparent vignette so video is 100% visible */
 [data-theme="light"] .hero-video {
   opacity: 0.75;
   filter: saturate(1.15) brightness(0.95);
 }
 
 [data-theme="light"] .hero-overlay {
-  background: radial-gradient(circle at center, rgba(20, 34, 26, 0.35) 0%, rgba(20, 34, 26, 0.75) 100%);
+  background: radial-gradient(circle at center, rgba(25, 16, 36, 0.35) 0%, rgba(25, 16, 36, 0.75) 100%);
 }
 
 .hero-content {
@@ -305,7 +304,7 @@ nav {
   justify-content: center;
   gap: 8px;
   background-color: var(--accent);
-  color: #0c140f;
+  color: #ffffff;
   padding: 10px 22px;
   font-family: var(--font-body);
   font-weight: 700;
@@ -405,7 +404,7 @@ nav {
 .watch-image-wrap {
   width: 100%;
   height: 240px;
-  background-color: #060a07;
+  background-color: #0b0712;
   overflow: hidden;
   position: relative;
   cursor: pointer;
@@ -595,11 +594,11 @@ tr:hover td {
 }
 
 .contact-card.highlight {
-  animation: pulseOchre 1.5s ease-in-out;
+  animation: pulsePurple 1.5s ease-in-out;
 }
 
-@keyframes pulseOchre {
-  0% { border-color: var(--accent); box-shadow: 0 0 0 rgba(217, 146, 59, 0); }
+@keyframes pulsePurple {
+  0% { border-color: var(--accent); box-shadow: 0 0 0 transparent; }
   50% { border-color: var(--accent-hover); box-shadow: 0 0 25px var(--accent-glow); }
   100% { border-color: var(--border); box-shadow: var(--shadow); }
 }
@@ -756,7 +755,7 @@ tr:hover td {
 }
 
 .modal-img-box {
-  background-color: #060a07;
+  background-color: #0b0712;
   border-radius: var(--radius);
   overflow: hidden;
   border: 1px solid var(--border);

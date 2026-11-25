@@ -6,9 +6,9 @@ A modern, high-tech luxury horological showcase website built with **HTML5**, **
 
 ## ✨ Features
 
-1. **Ochre & Forest Green Palette (No Blue, No Harsh Black)**:
-   - **Dark Mode**: Warm, radiant **Golden Ochre** (`#D9923B`) paired with a deep pine forest green background (`#0C140F`, `#132019`) and luminous sage green badges (`#34D399`). Strictly no blue tones and no cold, pitch-black shades.
-   - **Light Mode**: Warm linen/sand canvas (`#F6F5F0`, `#FFFFFF`), deep British racing/forest green (`#2D6A4F`), and refined bronze ochre (`#A86C29`). Soft, natural, and comfortable on the eyes.
+1. **Royal Purple & Amethyst Luxury Palette**:
+   - **Dark Mode**: Deep midnight obsidian purple (`#0F0A18`, `#171024`) paired with radiant **Royal Violet / Purple** (`#A855F7`), glowing lilac badges (`#C084FC`), and soft orchid accents (`#E879F9`).
+   - **Light Mode**: Elegant lavender-tinted sand canvas (`#F7F5FA`, `#FFFFFF`), deep imperial purple (`#7E22CE`), and crisp lilac accents. Soft, comfortable, and sophisticated.
    - Interactive **Dark Mode / Light Mode** switch in the navbar with instant live toggle and `localStorage` persistence.
 
 2. **Cinema Video Hero Screen (`video.webm`)**:
@@ -28,7 +28,7 @@ A modern, high-tech luxury horological showcase website built with **HTML5**, **
    - Clicking **Inquire** triggers a floating toast notification.
    - Smoothly scrolls to the contact form.
    - Pre-selects the watch in the dropdown and pre-fills the message text with reference details.
-   - Pulses the contact card with an animated ochre glow.
+   - Pulses the contact card with an animated purple glow.
 
 5. **Smooth Form Handling**:
    - Zero-jump, zero-reload form validation.
@@ -49,7 +49,7 @@ A modern, high-tech luxury horological showcase website built with **HTML5**, **
 ```text
 Project/
 ├── index.html       # Single-page semantic HTML5 with video hero & modal
-├── style.css        # Ochre & forest green palette, video hero, modal & responsive design
+├── style.css        # Royal purple palette, video hero, modal & responsive design
 ├── script.js        # Streamlined JS for modal, theme toggle, toasts, form
 ├── video.webm       # High-definition hero background video
 ├── catalogue/       # Studio photography for Rolex, Omega, Tudor
