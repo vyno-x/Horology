@@ -316,10 +316,6 @@ nav {
   box-shadow: 0 4px 14px var(--accent-glow);
 }
 
-[data-theme="light"] .btn {
-  color: #ffffff;
-}
-
 .btn:hover {
   background-color: var(--accent-hover);
   transform: translateY(-2px);
@@ -342,6 +338,23 @@ nav {
   border-color: var(--accent);
   color: var(--accent);
   box-shadow: var(--shadow);
+}
+
+/* Light Mode View Details Button Visibility */
+[data-theme="light"] .btn-secondary,
+[data-theme="light"] .btn-details {
+  background-color: #f3edf9;
+  color: var(--accent);
+  border: 1px solid #dfd4ee;
+  font-weight: 700;
+}
+
+[data-theme="light"] .btn-secondary:hover,
+[data-theme="light"] .btn-details:hover {
+  background-color: var(--accent);
+  color: #ffffff;
+  border-color: var(--accent);
+  box-shadow: 0 4px 14px var(--accent-glow);
 }
 
 .btn-sm {
@@ -829,6 +842,31 @@ tr:hover td {
 .modal-specs-table td:last-child {
   color: var(--text-main);
   font-weight: 600;
+}
+
+/* Light Mode Modal & Card Enhancements */
+[data-theme="light"] .watch-image-wrap {
+  background-color: #f7f5fa;
+}
+
+[data-theme="light"] .modal-card {
+  background-color: #ffffff;
+  border: 1px solid #dfd8ea;
+  box-shadow: 0 25px 60px rgba(25, 16, 36, 0.22);
+}
+
+[data-theme="light"] .modal-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #dfd8ea;
+}
+
+[data-theme="light"] .modal-img-box {
+  background-color: #f7f5fa;
+  border: 1px solid #dfd8ea;
+}
+
+[data-theme="light"] .modal-specs-table td {
+  border-bottom: 1px solid #dfd8ea;
 }
 
 /* ----------------------------------------------------------

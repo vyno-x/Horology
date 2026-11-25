@@ -41,7 +41,7 @@ A modern, high-tech luxury horological showcase website built with **HTML5**, **
    - **Tudor Black Bay Fifty-Eight** (Ref. M79030N-0001 &middot; $3,800)
 
 7. **Concise, High-Performance JavaScript**:
-   - Streamlined `script.js` to ~145 lines while preserving 100% of all interactive functionality.
+   - Streamlined `script.js` to ~110 lines while preserving 100% of all interactive functionality.
 
 ---
 
